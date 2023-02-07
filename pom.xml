@@ -11,17 +11,12 @@
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <okhttp.version>4.10.0</okhttp.version>
-        <junit-jupiter-engine.version>${junit-jupiter-params.version}</junit-jupiter-engine.version>
         <junit-jupiter-engine.scope>test</junit-jupiter-engine.scope>
-        <jaxb-api.version>2.1</jaxb-api.version>
-        <jackson-databind.version>${jaxb-api.version}3.4.2</jackson-databind.version>
-        <mockito-inline.version>${mockito-junit-jupiter.version}</mockito-inline.version>
-        <assertj-core.version>3.22.0</assertj-core.version>
-        <mockito-junit-jupiter.version>4.6.1</mockito-junit-jupiter.version>
         <junit-jupiter-params.version>5.9.0</junit-jupiter-params.version>
+        <mockito-junit-jupiter.version>4.6.1</mockito-junit-jupiter.version>
         <lombok.version>1.18.24</lombok.version>
         <postgresql.version>42.5.1</postgresql.version>
+        <assertj-core.version>3.22.0</assertj-core.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -37,7 +32,6 @@
                 <version>${junit-jupiter-params.version}</version>
                 <scope>test</scope>
             </dependency>
-
             <dependency>
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-inline</artifactId>
@@ -52,23 +46,8 @@
             <dependency>
                 <groupId>org.assertj</groupId>
                 <artifactId>assertj-core</artifactId>
-                <version>3.22.0</version>
+                <version>${assertj-core.version}</version>
                 <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>javax.xml.bind</groupId>
-                <artifactId>jaxb-api</artifactId>
-                <version>2.1</version>
-            </dependency>
-            <dependency>
-                <groupId>com.squareup.okhttp3</groupId>
-                <artifactId>okhttp</artifactId>
-                <version>4.10.0</version>
-            </dependency>
-            <dependency>
-                <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-databind</artifactId>
-                <version>2.13.4.2</version>
             </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
@@ -90,18 +69,6 @@
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>javax.xml.bind</groupId>
-            <artifactId>jaxb-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.squareup.okhttp3</groupId>
-            <artifactId>okhttp</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
