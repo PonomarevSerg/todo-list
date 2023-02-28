@@ -9,3 +9,5 @@ create table users
 INSERT INTO users VALUES (default, 'Andrey');
 INSERT INTO users VALUES (default, 'Oleg');
 INSERT INTO users VALUES (default, 'Aleksey');
+
+--HELLO IGOR
