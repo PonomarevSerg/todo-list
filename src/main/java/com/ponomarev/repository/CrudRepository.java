@@ -1,4 +1,4 @@
-package com.ponomarev;
+package com.ponomarev.repository;
 
 import java.util.List;
 import java.util.Optional;

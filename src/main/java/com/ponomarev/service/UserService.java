@@ -1,7 +1,7 @@
 package com.ponomarev.service;
 
 import com.ponomarev.model.entity.User;
-import com.ponomarev.UserRepository;
+import com.ponomarev.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;

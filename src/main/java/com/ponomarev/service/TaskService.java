@@ -1,10 +1,10 @@
 package com.ponomarev.service;
 
 import com.ponomarev.model.entity.User;
-import com.ponomarev.UserRepository;
+import com.ponomarev.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import com.ponomarev.model.entity.Task;
-import com.ponomarev.TaskRepository;
+import com.ponomarev.repository.TaskRepository;
 
 import java.util.List;
 import java.util.Optional;
@@ -21,18 +21,6 @@ public class TaskService {
 
     //Exception in thread "main" java.util.NoSuchElementException. Scanner
     public void save() {
-        Task task = taskRepository.createTask();
-        try (Scanner scanner = new Scanner(System.in)) {
-            List<User> all = userRepository.findAll();
-            all.forEach(System.out::println);
-            System.out.println("Введите ID пользователя которому необходимо поручить задачу: ");
-            int assignTo = scanner.nextInt();
-            task.setAssignTo(all.get(assignTo));
-            System.out.println("Введите ID пользователя который создал задачу: ");
-            int creator = scanner.nextInt();
-            task.setCreator(all.get(creator));
-        }
-        taskRepository.save(task);
     }
 
     public Optional<Task> findById() {
